@@ -1,0 +1,15 @@
+{
+  "name": "CARREXO · Mudanzas y guardamuebles (demostración)",
+  "short_name": "CARREXO",
+  "description": "Plantilla de demostración de una empresa de mudanzas y guardamuebles ficticia.",
+  "lang": "es",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0B0B0C",
+  "theme_color": "#0B0B0C",
+  "icons": [
+    { "src": "assets/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "assets/og.png", "sizes": "1200x630", "type": "image/png" }
+  ]
+}
