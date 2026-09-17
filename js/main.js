@@ -258,6 +258,7 @@
     var furgon = $("#furgon");
     if (!escena || !furgon || window.innerWidth < 980) { return; }
 
+    escena.classList.add("esta-anclada");
     var grupos = $$(".carga-caja", furgon);
     /* cada caja entra desde fuera del camión, por la derecha y desde abajo */
     grupos.forEach(function (g, i) {
