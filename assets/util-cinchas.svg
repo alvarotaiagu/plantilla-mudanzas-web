@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240" width="360" height="240" role="img" aria-label="Ilustración de cinchas de amarre y una faja de carga">
+  <rect width="360" height="240" fill="#141518"/>
+  <g stroke="#1C1E22" stroke-width="1">
+    <path d="M0 40h360M0 80h360M0 120h360M0 160h360M0 200h360M40 0v240M80 0v240M120 0v240M160 0v240M200 0v240M240 0v240M280 0v240M320 0v240"/>
+  </g>
+  <path d="M30 60 C 110 24, 150 96, 230 60" fill="none" stroke="#FFD11A" stroke-width="12" stroke-linecap="round"/>
+  <path d="M30 60 C 110 24, 150 96, 230 60" fill="none" stroke="#C9A310" stroke-width="3" stroke-dasharray="6 10"/>
+  <rect x="228" y="40" width="60" height="42" rx="6" fill="#20232A" stroke="#6B7178" stroke-width="3"/>
+  <path d="M240 52 h36 M240 70 h36" stroke="#6B7178" stroke-width="3"/>
+  <path d="M288 61 h44" stroke="#4E535A" stroke-width="8" stroke-linecap="round"/>
+  <path d="M40 150 C 120 120, 200 180, 316 146" fill="none" stroke="#3A3E44" stroke-width="16" stroke-linecap="round"/>
+  <path d="M40 150 C 120 120, 200 180, 316 146" fill="none" stroke="#565C64" stroke-width="3" stroke-dasharray="4 12"/>
+  <rect x="150" y="128" width="70" height="46" rx="8" fill="#1A1C1F" stroke="#6B7178" stroke-width="3"/>
+  <path d="M164 140 v22 M186 138 v26 M206 140 v22" stroke="#FFD11A" stroke-width="4" stroke-linecap="round"/>
+  <text x="24" y="222" fill="#8C939B" font-family="Roboto Mono, monospace" font-size="13" letter-spacing="2">CINCHAS Y FAJA DE CARGA</text>
+</svg>

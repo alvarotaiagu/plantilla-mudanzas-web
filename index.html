@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  SITIO DE DEMOSTRACIÓN. CARREXO es una empresa de mudanzas FICTICIA.
+  Nombre, dirección, teléfono, horarios, tarifas, equipo y opiniones son datos
+  de muestra inventados para enseñar la plantilla. No corresponden a ninguna
+  empresa real. Plantilla reskineable: ver README.md.
+  ============================================================================
+-->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CARREXO · Mudanzas y guardamuebles en Ordes (demo)</title>
+<meta name="description" content="Plantilla de demostración de una empresa de mudanzas ficticia: inventario del servicio, calculadora de volumen, guardamuebles y tarifas de muestra.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0B0B0C">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CARREXO · Mudanzas y guardamuebles (sitio de demostración)">
+<meta property="og:description" content="Negocio ficticio. Plantilla de muestra con inventario del servicio, calculadora de volumen y guardamuebles.">
+<meta property="og:image" content="assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Mono:wght@400;500&family=Work+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MovingCompany",
+  "name": "CARREXO",
+  "description": "Empresa de mudanzas y guardamuebles ficticia usada como plantilla de demostración.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rúa da Grúa 8, nave 6",
+    "addressLocality": "Ordes",
+    "addressRegion": "A Coruña",
+    "postalCode": "15680",
+    "addressCountry": "ES"
+  },
+  "telephone": "+34981000000",
+  "email": "hola@carrexo.example",
+  "priceRange": "€€",
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "19:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00" }
+  ]
+}
+</script>
+</head>
+<body>
+
+<a class="salto" href="#contenido">Saltar al contenido</a>
+
+<div class="cursor" id="cursor" aria-hidden="true"><span class="cursor-caja"></span><span class="cursor-texto" id="cursor-texto"></span></div>
+
+<header class="cabecera" id="cabecera">
+  <a class="marca" href="#inicio" aria-label="CARREXO, inicio">
+    <img src="assets/logo.svg" width="54" height="54" alt="" class="marca-mark">
+    <span class="marca-texto">CARREXO<em>mudanzas y guardamuebles</em></span>
+  </a>
+
+  <nav class="nav" id="nav" aria-label="Principal">
+    <ul class="nav-lista">
+      <li><a href="#camion">Qué incluye</a></li>
+      <li><a href="#volumen">Calcular volumen</a></li>
+      <li><a href="#guardamuebles">Guardamuebles</a></li>
+      <li><a href="#dia">El día</a></li>
+      <li><a href="#tarifas">Tarifas</a></li>
+      <li><a href="#presupuesto">Presupuesto</a></li>
+    </ul>
+    <a class="boton boton--amarillo nav-cta" href="#presupuesto" data-iman>Pedir presupuesto</a>
+  </nav>
+
+  <button class="hamburguesa" id="hamburguesa" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main id="contenido">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="inicio">
+    <div class="hero-texto">
+      <p class="sobretitulo" data-aparecer>Mudanzas y guardamuebles · Ordes · A Coruña · desde 2012</p>
+      <h1 class="titular titular--hero" data-revelar>Todo lo que tienes, numerado y en su caja</h1>
+      <p class="parrafo parrafo--grande" data-aparecer>Hacemos mudanzas de casa y de oficina en Galicia, y guardamos
+        lo que no cabe todavía. Cada mudanza empieza por una visita y una hoja de inventario: sin esa hoja no
+        damos precio, porque el precio depende de lo que hay, no de lo que se supone.</p>
+      <div class="hero-acciones" data-aparecer>
+        <a class="boton boton--amarillo" href="#presupuesto" data-iman>Pedir presupuesto</a>
+        <a class="boton boton--linea" href="#volumen" data-iman>Calcular mi volumen</a>
+      </div>
+      <dl class="hero-datos" data-aparecer>
+        <div><dt>Camión</dt><dd>40 m³ con plataforma</dd></div>
+        <div><dt>Equipo</dt><dd>dos operarios de serie, tres si hace falta</dd></div>
+        <div><dt>Visita previa</dt><dd>gratuita, también por videollamada</dd></div>
+      </dl>
+    </div>
+
+    <figure class="hero-figura" aria-hidden="true">
+      <svg class="pila" id="pila-hero" viewBox="0 0 420 420">
+        <g class="pila-caja" data-n="1">
+          <rect x="40" y="250" width="150" height="120" rx="5" fill="#181A1D" stroke="#4E535A" stroke-width="3"/>
+          <path d="M40 292 h150" stroke="#4E535A" stroke-width="2"/>
+          <rect x="98" y="250" width="34" height="42" fill="#FFD11A"/>
+          <text x="52" y="332" class="pila-ref">CRX-001</text>
+        </g>
+        <g class="pila-caja" data-n="2">
+          <rect x="206" y="268" width="122" height="102" rx="5" fill="#181A1D" stroke="#4E535A" stroke-width="3"/>
+          <path d="M206 302 h122" stroke="#4E535A" stroke-width="2"/>
+          <rect x="254" y="268" width="28" height="34" fill="#FFD11A"/>
+          <text x="216" y="344" class="pila-ref">CRX-002</text>
+        </g>
+        <g class="pila-caja" data-n="3">
+          <rect x="64" y="132" width="132" height="110" rx="5" fill="#181A1D" stroke="#4E535A" stroke-width="3"/>
+          <path d="M64 170 h132" stroke="#4E535A" stroke-width="2"/>
+          <rect x="116" y="132" width="30" height="38" fill="#FFD11A"/>
+          <text x="76" y="212" class="pila-ref">CRX-014</text>
+        </g>
+        <g class="pila-caja" data-n="4">
+          <rect x="212" y="158" width="108" height="84" rx="5" fill="#181A1D" stroke="#4E535A" stroke-width="3"/>
+          <path d="M212 186 h108" stroke="#4E535A" stroke-width="2"/>
+          <rect x="254" y="158" width="26" height="28" fill="#FFD11A"/>
+          <text x="222" y="224" class="pila-ref">CRX-021</text>
+        </g>
+        <g class="pila-caja" data-n="5">
+          <rect x="118" y="46" width="120" height="78" rx="5" fill="#181A1D" stroke="#4E535A" stroke-width="3"/>
+          <path d="M118 72 h120" stroke="#4E535A" stroke-width="2"/>
+          <rect x="164" y="46" width="28" height="26" fill="#FFD11A"/>
+          <text x="128" y="106" class="pila-ref">CRX-037</text>
+        </g>
+        <path d="M24 374 h372" stroke="#2A2D31" stroke-width="4"/>
+      </svg>
+      <figcaption class="hero-pie">Cada caja, una referencia. Y la referencia, en la hoja.</figcaption>
+    </figure>
+  </section>
+
+  <!-- ================= FRANJA ================= -->
+  <section class="franja" aria-label="Servicios">
+    <div class="franja-pista" id="franja-pista">
+      <div class="franja-grupo">
+        <span>Embalaje</span><i aria-hidden="true"></i><span>Carga</span><i aria-hidden="true"></i><span>Transporte</span><i aria-hidden="true"></i><span>Montaje</span><i aria-hidden="true"></i><span>Guardamuebles</span><i aria-hidden="true"></i>
+      </div>
+      <div class="franja-grupo" aria-hidden="true">
+        <span>Embalaje</span><i></i><span>Carga</span><i></i><span>Transporte</span><i></i><span>Montaje</span><i></i><span>Guardamuebles</span><i></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EL CAMIÓN (protagonista) ================= -->
+  <section class="camion" id="camion">
+    <div class="camion-cab">
+      <p class="rotulo"><span>01</span> Qué incluye</p>
+      <h2 class="titular" data-revelar>Cinco cajas que van siempre en el camión</h2>
+      <p class="parrafo">Una mudanza no es «traer un camión». Son cinco trabajos distintos, y los cinco están
+        en el presupuesto aunque no se vean. Baja y se van cargando.</p>
+    </div>
+
+    <div class="camion-escena" id="camion-escena">
+      <div class="camion-lienzo">
+        <svg class="furgon" id="furgon" viewBox="0 0 1080 470" role="img"
+             aria-label="Esquema de un camión de mudanzas cargándose con cinco cajas numeradas: embalaje, carga, transporte, montaje y guardamuebles.">
+          <!-- caja del camión -->
+          <rect x="40" y="70" width="640" height="300" rx="8" fill="#121315" stroke="#4E535A" stroke-width="4"/>
+          <path d="M40 120 h640" stroke="#2A2D31" stroke-width="2"/>
+          <path d="M40 320 h640" stroke="#2A2D31" stroke-width="2"/>
+          <!-- cabina -->
+          <path d="M680 170 h150 l90 100 v100 h-240 Z" fill="#121315" stroke="#4E535A" stroke-width="4"/>
+          <path d="M700 190 h120 l70 78 h-190 Z" fill="#0B0B0C" stroke="#4E535A" stroke-width="3"/>
+          <rect x="836" y="292" width="40" height="16" rx="4" fill="#FFD11A"/>
+          <!-- ruedas -->
+          <circle cx="200" cy="378" r="42" fill="#0B0B0C" stroke="#4E535A" stroke-width="4"/>
+          <circle cx="200" cy="378" r="14" fill="#2A2D31"/>
+          <circle cx="560" cy="378" r="42" fill="#0B0B0C" stroke="#4E535A" stroke-width="4"/>
+          <circle cx="560" cy="378" r="14" fill="#2A2D31"/>
+          <circle cx="860" cy="378" r="42" fill="#0B0B0C" stroke="#4E535A" stroke-width="4"/>
+          <circle cx="860" cy="378" r="14" fill="#2A2D31"/>
+          <path d="M20 420 h1040" stroke="#2A2D31" stroke-width="5"/>
+          <!-- rótulo del camión -->
+          <text x="70" y="108" class="furgon-rotulo">CARREXO</text>
+
+          <!-- cajas que se cargan -->
+          <g class="carga-caja" data-caja="embalaje">
+            <rect x="72" y="250" width="150" height="110" rx="5" fill="#1A1C1F" stroke="#6B7178" stroke-width="3"/>
+            <path d="M72 288 h150" stroke="#6B7178" stroke-width="2"/>
+            <rect x="130" y="250" width="34" height="38" fill="#FFD11A"/>
+            <text x="84" y="330" class="carga-ref">01 · EMBALAJE</text>
+          </g>
+          <g class="carga-caja" data-caja="carga">
+            <rect x="236" y="262" width="130" height="98" rx="5" fill="#1A1C1F" stroke="#6B7178" stroke-width="3"/>
+            <path d="M236 296 h130" stroke="#6B7178" stroke-width="2"/>
+            <rect x="286" y="262" width="30" height="34" fill="#FFD11A"/>
+            <text x="248" y="334" class="carga-ref">02 · CARGA</text>
+          </g>
+          <g class="carga-caja" data-caja="transporte">
+            <rect x="380" y="240" width="160" height="120" rx="5" fill="#1A1C1F" stroke="#6B7178" stroke-width="3"/>
+            <path d="M380 282 h160" stroke="#6B7178" stroke-width="2"/>
+            <rect x="444" y="240" width="32" height="42" fill="#FFD11A"/>
+            <text x="392" y="326" class="carga-ref">03 · TRANSPORTE</text>
+          </g>
+          <g class="carga-caja" data-caja="montaje">
+            <rect x="96" y="132" width="140" height="106" rx="5" fill="#1A1C1F" stroke="#6B7178" stroke-width="3"/>
+            <path d="M96 168 h140" stroke="#6B7178" stroke-width="2"/>
+            <rect x="152" y="132" width="30" height="36" fill="#FFD11A"/>
+            <text x="108" y="206" class="carga-ref">04 · MONTAJE</text>
+          </g>
+          <g class="carga-caja" data-caja="guardamuebles">
+            <rect x="252" y="146" width="150" height="92" rx="5" fill="#1A1C1F" stroke="#6B7178" stroke-width="3"/>
+            <path d="M252 176 h150" stroke="#6B7178" stroke-width="2"/>
+            <rect x="312" y="146" width="30" height="30" fill="#FFD11A"/>
+            <text x="264" y="212" class="carga-ref">05 · GUARDAMUEBLES</text>
+          </g>
+        </svg>
+      </div>
+
+      <ol class="cajas" id="cajas">
+        <li class="caja" data-caja="embalaje">
+          <p class="caja-ref">Caja 01</p>
+          <h3>Embalaje</h3>
+          <p>Cajas, papel, film y mantas los ponemos nosotros. Desmontamos armarios y camas, envolvemos
+            cuadros y espejos, y precintamos con la referencia escrita en un lateral.</p>
+          <p class="caja-dato">Incluye el material</p>
+        </li>
+        <li class="caja" data-caja="carga">
+          <p class="caja-ref">Caja 02</p>
+          <h3>Carga y bajada</h3>
+          <p>Protección del portal y del ascensor, y elevador exterior cuando el mueble no pasa por la
+            escalera. Los permisos de aparcamiento los pedimos nosotros al ayuntamiento.</p>
+          <p class="caja-dato">Elevador, si hace falta</p>
+        </li>
+        <li class="caja" data-caja="transporte">
+          <p class="caja-ref">Caja 03</p>
+          <h3>Transporte</h3>
+          <p>Camión de 40 m³ con la carga amarrada y separada por mantas. Seguro de transporte incluido;
+            el valor declarado se firma en la hoja antes de salir.</p>
+          <p class="caja-dato">Seguro incluido</p>
+        </li>
+        <li class="caja" data-caja="montaje">
+          <p class="caja-ref">Caja 04</p>
+          <h3>Montaje</h3>
+          <p>Se monta lo que se desmontó y se deja cada caja en su habitación, porque la referencia dice a
+            cuál va. El cartón usado lo retiramos al día siguiente.</p>
+          <p class="caja-dato">Y retirada del cartón</p>
+        </li>
+        <li class="caja" data-caja="guardamuebles">
+          <p class="caja-ref">Caja 05</p>
+          <h3>Guardamuebles</h3>
+          <p>Si la casa nueva no está lista, lo que sobra va a contenedores precintados de ocho metros
+            cúbicos en nuestra nave, con su inventario y su fecha.</p>
+          <p class="caja-dato">Contenedor precintado</p>
+        </li>
+      </ol>
+    </div>
+
+    <p class="camion-aviso" id="camion-aviso" role="status">Caja 01 · Embalaje</p>
+  </section>
+
+  <!-- ================= CALCULADORA DE VOLUMEN ================= -->
+  <section class="volumen" id="volumen">
+    <div class="volumen-cab">
+      <p class="rotulo"><span>02</span> Calcular volumen</p>
+      <h2 class="titular" data-revelar>Cuánto ocupa tu casa, más o menos</h2>
+      <p class="parrafo">Esto no es un presupuesto: es una estimación de metros cúbicos para saber de qué
+        estamos hablando por teléfono. El número bueno sale de la visita, mirando los muebles.</p>
+    </div>
+
+    <form class="calculadora" id="calculadora">
+      <div class="calculadora-campos">
+        <div class="campo-num">
+          <label for="c-salon">Salones y comedores</label>
+          <input id="c-salon" type="number" min="0" max="9" value="1" data-m3="8">
+        </div>
+        <div class="campo-num">
+          <label for="c-doble">Dormitorios dobles</label>
+          <input id="c-doble" type="number" min="0" max="9" value="1" data-m3="6">
+        </div>
+        <div class="campo-num">
+          <label for="c-individual">Dormitorios individuales</label>
+          <input id="c-individual" type="number" min="0" max="9" value="1" data-m3="4">
+        </div>
+        <div class="campo-num">
+          <label for="c-cocina">Cocinas</label>
+          <input id="c-cocina" type="number" min="0" max="9" value="1" data-m3="5">
+        </div>
+        <div class="campo-num">
+          <label for="c-trastero">Trasteros y garajes</label>
+          <input id="c-trastero" type="number" min="0" max="9" value="0" data-m3="4">
+        </div>
+        <div class="campo-num">
+          <label for="c-oficina">Despachos u oficinas</label>
+          <input id="c-oficina" type="number" min="0" max="9" value="0" data-m3="5">
+        </div>
+      </div>
+
+      <div class="calculadora-salida" role="status" aria-live="polite">
+        <p class="salida-titulo">Estimación</p>
+        <p class="salida-m3"><span id="salida-m3">23</span><i>m³</i></p>
+        <p class="salida-camion" id="salida-camion">Un camión de 40 m³ va sobrado; con esto se hace en un viaje.</p>
+        <ul class="salida-notas">
+          <li>Un piso de dos dormitorios suele estar entre 20 y 30 m³.</li>
+          <li>No cuenta el piano, la caja fuerte ni nada que pida grúa: eso se mira en la visita.</li>
+          <li>Estimación orientativa de una web de demostración, no una oferta.</li>
+        </ul>
+      </div>
+    </form>
+  </section>
+
+  <!-- ================= GUARDAMUEBLES ================= -->
+  <section class="guardamuebles" id="guardamuebles">
+    <div class="guarda-cab">
+      <p class="rotulo"><span>03</span> Guardamuebles</p>
+      <h2 class="titular" data-revelar>Contenedores precintados, no trasteros abiertos</h2>
+      <p class="parrafo">Guardamos en contenedores de madera de ocho metros cúbicos que se precintan delante
+        de ti y no se vuelven a abrir hasta que los pidas. La nave tiene alarma, detección de incendios y
+        nadie vive dentro de ella.</p>
+    </div>
+
+    <ul class="contenedores">
+      <li class="contenedor">
+        <p class="contenedor-tam"><span>8</span><i>m³</i></p>
+        <h3>Un contenedor</h3>
+        <p>Lo de un piso pequeño o el sobrante de una mudanza: unos veinte muebles medianos y cuarenta
+          cajas.</p>
+        <p class="contenedor-precio">65 € al mes <span>precio de muestra</span></p>
+      </li>
+      <li class="contenedor">
+        <p class="contenedor-tam"><span>16</span><i>m³</i></p>
+        <h3>Dos contenedores</h3>
+        <p>Un piso de dos dormitorios completo, con electrodomésticos y colchones enfundados.</p>
+        <p class="contenedor-precio">115 € al mes <span>precio de muestra</span></p>
+      </li>
+      <li class="contenedor">
+        <p class="contenedor-tam"><span>32</span><i>m³</i></p>
+        <h3>Cuatro contenedores</h3>
+        <p>Una casa entera o el mobiliario de una oficina mientras dura la obra.</p>
+        <p class="contenedor-precio">210 € al mes <span>precio de muestra</span></p>
+      </li>
+    </ul>
+
+    <dl class="cifras" id="cifras">
+      <div><dt>metros de nave</dt><dd><span class="contador" data-hasta="900">900</span></dd></div>
+      <div><dt>contenedores</dt><dd><span class="contador" data-hasta="48">48</span></dd></div>
+      <div><dt>años trabajando</dt><dd><span class="contador" data-hasta="14">14</span></dd></div>
+      <div><dt>mudanzas al año</dt><dd><span class="contador" data-hasta="260">260</span></dd></div>
+    </dl>
+  </section>
+
+  <!-- ================= EL DÍA ================= -->
+  <section class="dia" id="dia">
+    <div class="dia-cab">
+      <p class="rotulo"><span>04</span> El día</p>
+      <h2 class="titular" data-revelar>Cómo va una mudanza de piso, hora a hora</h2>
+      <p class="parrafo">Este es el guion de un piso de dos dormitorios con ascensor en los dos portales.
+        Si falta ascensor o hay que montar elevador, todo se corre una hora.</p>
+    </div>
+
+    <ol class="horas">
+      <li><p class="hora">08:00</p><h3>Llegada y protección</h3><p>Portal, ascensor y suelos. Se repasa la hoja de inventario contigo antes de tocar nada.</p></li>
+      <li><p class="hora">08:30</p><h3>Embalaje final</h3><p>Lo que quedó suelto: cocina, baño y armarios. Desmontaje de camas y mesas.</p></li>
+      <li><p class="hora">10:30</p><h3>Carga</h3><p>Primero lo grande y amarrado, después las cajas por referencia. Foto de la carga cerrada.</p></li>
+      <li><p class="hora">13:00</p><h3>Viaje</h3><p>Una hora larga hasta A Coruña. Comemos allí, no en tu salón.</p></li>
+      <li><p class="hora">15:30</p><h3>Descarga y montaje</h3><p>Cada caja a su habitación y se monta lo desmontado. Se revisa la hoja otra vez.</p></li>
+      <li><p class="hora">18:00</p><h3>Firma y cartón</h3><p>Firmas la hoja con las incidencias, si las hay. El cartón se recoge al día siguiente.</p></li>
+    </ol>
+  </section>
+
+  <!-- ================= TARIFAS ================= -->
+  <section class="tarifas" id="tarifas">
+    <div class="tarifas-cab">
+      <p class="rotulo"><span>05</span> Tarifas</p>
+      <h2 class="titular" data-revelar>Precios de muestra, para hacerse una idea</h2>
+      <p class="parrafo">Importes inventados para esta demostración. En una empresa real, estos números
+        salen de la visita: distancia, volumen, planta, ascensor y si hay que pedir elevador o permiso de
+        aparcamiento.</p>
+    </div>
+
+    <table class="tabla">
+      <caption class="visual-oculto">Tarifas orientativas de muestra de la empresa ficticia CARREXO</caption>
+      <thead>
+        <tr><th scope="col">Servicio</th><th scope="col">Qué incluye</th><th scope="col">Desde</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">Porte local</th><td>Dos operarios y camión, hasta 3 horas en el mismo municipio</td><td><b>180 €</b></td></tr>
+        <tr><th scope="row">Mudanza de piso</th><td>Dos dormitorios, embalaje, transporte y montaje</td><td><b>690 €</b></td></tr>
+        <tr><th scope="row">Hora extra de equipo</th><td>Dos operarios y camión, por hora empezada</td><td><b>45 €</b></td></tr>
+        <tr><th scope="row">Operario adicional</th><td>Tercer operario para toda la jornada</td><td><b>160 €</b></td></tr>
+        <tr><th scope="row">Elevador exterior</th><td>Montaje, jornada y desmontaje</td><td><b>120 €</b></td></tr>
+        <tr><th scope="row">Guardamuebles</th><td>Contenedor precintado de 8 m³, al mes</td><td><b>65 €</b></td></tr>
+        <tr><th scope="row">Solo material</th><td>Pack de 30 cajas, papel, film y precinto</td><td><b>85 €</b></td></tr>
+        <tr><th scope="row">Retirada de muebles</th><td>Traslado a punto limpio de lo que no va</td><td><b>90 €</b></td></tr>
+      </tbody>
+    </table>
+    <p class="nota">Precios ficticios, IVA incluido. El permiso municipal de aparcamiento, cuando hace falta,
+      lo cobra el ayuntamiento y se factura aparte y sin recargo.</p>
+  </section>
+
+  <!-- ================= EQUIPO ================= -->
+  <section class="equipo-sec" id="equipo">
+    <div class="equipo-cab">
+      <p class="rotulo"><span>06</span> El equipo</p>
+      <h2 class="titular" data-revelar>Tres personas y las herramientas que no sueltan</h2>
+      <p class="parrafo">Somos pocos y siempre los mismos: la persona que fue a ver tu casa es una de las
+        que entra por la puerta el día de la mudanza. Aquí nadie se presenta con una foto de archivo, así
+        que cada uno se presenta con su herramienta.</p>
+    </div>
+
+    <ul class="equipo">
+      <li>
+        <img src="assets/util-carretilla.svg" width="360" height="240" loading="lazy"
+             alt="Ilustración de una carretilla de carga con correas.">
+        <div class="equipo-pie">
+          <h3>Manuel Rilo</h3>
+          <p class="equipo-rol">Jefe de equipo · visitas y hoja de inventario</p>
+          <p>Es quien va a ver la casa, cuenta los muebles y firma el número. Si alguien te dice un precio
+            por teléfono sin verlo, no es él.</p>
+        </div>
+      </li>
+      <li>
+        <img src="assets/util-cinchas.svg" width="360" height="240" loading="lazy"
+             alt="Ilustración de cinchas de amarre y una faja de carga.">
+        <div class="equipo-pie">
+          <h3>Antía Ferro</h3>
+          <p class="equipo-rol">Carga y amarre</p>
+          <p>Coloca el camión. Sabe en qué orden entra todo para que no se mueva en la autovía y para que
+            salga en el orden que interesa.</p>
+        </div>
+      </li>
+      <li>
+        <img src="assets/util-precinto.svg" width="360" height="240" loading="lazy"
+             alt="Ilustración de un rollo de precinto y una caja etiquetada.">
+        <div class="equipo-pie">
+          <h3>Brais Nogueira</h3>
+          <p class="equipo-rol">Embalaje, montaje y guardamuebles</p>
+          <p>Desmonta, embala y vuelve a montar. Lleva también el registro de la nave: qué contenedor es de
+            quién y desde cuándo.</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ================= PREGUNTAS ================= -->
+  <section class="preguntas" id="preguntas">
+    <div class="preguntas-cab">
+      <p class="rotulo"><span>07</span> Preguntas</p>
+      <h2 class="titular" data-revelar>Lo que se pregunta en la visita</h2>
+    </div>
+    <div class="acordeon">
+      <details><summary>¿Por qué no dais precio por teléfono?</summary>
+        <p>Porque sin ver la casa el número se queda corto y acaba en discusión el día de la mudanza.
+          La visita es gratuita y dura veinte minutos; si prefieres, se hace por videollamada enseñando
+          las habitaciones.</p></details>
+      <details><summary>¿Qué cubre el seguro?</summary>
+        <p>El transporte lleva un seguro de responsabilidad sobre el valor declarado que firmas en la hoja
+          antes de salir. Lo que no se embala con nosotros y ya venía roto no entra: por eso se anota el
+          estado de las piezas delicadas antes de cargar.</p></details>
+      <details><summary>¿Qué no transportáis?</summary>
+        <p>Dinero, joyas, documentación importante y medicación: eso va contigo en el coche. Tampoco
+          transportamos materias peligrosas (bombonas, disolventes, pinturas abiertas) ni animales vivos.
+          Las plantas sí, pero sin garantía.</p></details>
+      <details><summary>¿Hace falta permiso de aparcamiento?</summary>
+        <p>En calle estrecha o zona regulada, sí. Lo pedimos nosotros al ayuntamiento con una semana de
+          antelación y te pasamos la tasa tal cual, sin recargo.</p></details>
+      <details><summary>¿Puedo embalar yo para ahorrar?</summary>
+        <p>Sí, y mucha gente lo hace. Te vendemos el material y te decimos cómo cerrar las cajas. Ten en
+          cuenta que lo que embalas tú lo transportamos, pero no respondemos de cómo iba dentro.</p></details>
+      <details><summary>¿Se puede cambiar la fecha?</summary>
+        <p>Hasta 72 horas antes, sin coste. Más tarde depende de si podemos colocar el camión en otro
+          trabajo; si no, se cobra media jornada.</p></details>
+    </div>
+  </section>
+
+  <!-- ================= PRESUPUESTO ================= -->
+  <section class="presupuesto" id="presupuesto">
+    <div class="presupuesto-cab">
+      <p class="rotulo"><span>08</span> Presupuesto</p>
+      <h2 class="titular" data-revelar>Cuéntanos de dónde a dónde</h2>
+      <p class="parrafo">Con la dirección de salida, la de llegada, la planta y si hay ascensor ya podemos
+        ponerte fecha para la visita.</p>
+    </div>
+
+    <div class="presupuesto-rejilla">
+      <form class="formulario" id="formulario" novalidate>
+        <p class="formulario-aviso">Formulario de muestra: no envía nada a ningún servidor.</p>
+        <div class="campo-fila">
+          <div class="campo">
+            <label for="f-nombre">Nombre</label>
+            <input id="f-nombre" name="nombre" type="text" autocomplete="name" required>
+          </div>
+          <div class="campo">
+            <label for="f-tel">Teléfono</label>
+            <input id="f-tel" name="telefono" type="tel" autocomplete="tel" required>
+          </div>
+        </div>
+        <div class="campo-fila">
+          <div class="campo">
+            <label for="f-origen">Sale de</label>
+            <input id="f-origen" name="origen" type="text" placeholder="Ordes, 3º con ascensor">
+          </div>
+          <div class="campo">
+            <label for="f-destino">Va a</label>
+            <input id="f-destino" name="destino" type="text" placeholder="A Coruña, bajo">
+          </div>
+        </div>
+        <div class="campo-fila">
+          <div class="campo">
+            <label for="f-servicio">Qué necesitas</label>
+            <select id="f-servicio" name="servicio">
+              <option>Mudanza completa</option>
+              <option>Porte pequeño</option>
+              <option>Solo guardamuebles</option>
+              <option>Mudanza de oficina</option>
+              <option>Solo material de embalaje</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="f-fecha">Fecha aproximada</label>
+            <input id="f-fecha" name="fecha" type="text" placeholder="segunda quincena de octubre">
+          </div>
+        </div>
+        <div class="campo">
+          <label for="f-mensaje">Algo que debamos saber</label>
+          <textarea id="f-mensaje" name="mensaje" rows="4"></textarea>
+        </div>
+        <label class="campo-check"><input type="checkbox" id="f-ok" name="ok" required> He leído el <a href="aviso-legal.html">aviso legal</a>.</label>
+        <button class="boton boton--amarillo" type="submit" data-iman>Pedir visita</button>
+        <p class="formulario-respuesta" id="formulario-respuesta" role="status"></p>
+      </form>
+
+      <div class="presupuesto-datos">
+        <dl>
+          <div><dt>Nave y oficina</dt><dd>Rúa da Grúa 8, nave 6<br>15680 Ordes · A Coruña</dd></div>
+          <div><dt>Teléfono y WhatsApp</dt><dd><a href="tel:+34981000000">981 00 00 00</a><br><span class="muestra">Número de muestra: no funciona.</span></dd></div>
+          <div><dt>Correo</dt><dd><a href="mailto:hola@carrexo.example">hola@carrexo.example</a></dd></div>
+          <div><dt>Oficina</dt><dd>Lunes a viernes 08:00 – 19:00<br>Sábado 09:00 – 13:00</dd></div>
+          <div><dt>Zona</dt><dd>Toda Galicia. Fuera, con dos semanas de aviso.</dd></div>
+        </dl>
+
+        <div class="mapa" id="mapa">
+          <button class="boton boton--linea" type="button" id="mapa-boton" data-iman>Cargar el mapa de Google</button>
+          <p class="mapa-nota">El mapa no se carga hasta que lo pides: así esta página no pone cookies de
+            terceros por su cuenta. La dirección es inventada, así que el mapa muestra la localidad, no una
+            calle concreta.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="pie">
+  <div class="pie-rejilla">
+    <div class="pie-marca">
+      <img src="assets/logo.svg" width="54" height="54" alt="">
+      <p>CARREXO<br><span>Mudanzas y guardamuebles · Ordes</span></p>
+    </div>
+    <div>
+      <h2>Nave</h2>
+      <p>Rúa da Grúa 8, nave 6<br>15680 Ordes · A Coruña</p>
+    </div>
+    <div>
+      <h2>Contacto</h2>
+      <p><a href="tel:+34981000000">981 00 00 00</a><br><a href="mailto:hola@carrexo.example">hola@carrexo.example</a></p>
+    </div>
+    <div>
+      <h2>Oficina</h2>
+      <p>L–V 08:00 – 19:00<br>S 09:00 – 13:00</p>
+    </div>
+    <div>
+      <h2>Legal</h2>
+      <p><a href="aviso-legal.html">Aviso legal y privacidad</a><br><a href="#inicio">Volver arriba</a></p>
+    </div>
+  </div>
+  <p class="sello">Sitio de demostración. CARREXO es un negocio ficticio; los datos, ilustraciones, tarifas
+    y estimaciones son de muestra y no corresponden a ninguna empresa de mudanzas real.</p>
+</footer>
+
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Aviso de cookies" hidden>
+  <p>Esta web solo guarda en tu navegador que ya has visto este aviso. No hay cookies de terceros ni
+    analítica, y el mapa de Google se carga únicamente si pulsas su botón.</p>
+  <div class="cookie-acciones">
+    <button class="boton boton--amarillo" type="button" id="cookie-ok">De acuerdo</button>
+    <a class="cookie-mas" href="aviso-legal.html">Más información</a>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

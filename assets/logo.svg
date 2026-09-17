@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 54" width="54" height="54" role="img" aria-label="CARREXO">
+  <rect x="4" y="12" width="46" height="34" rx="4" fill="none" stroke="currentColor" stroke-width="3"/>
+  <path d="M4 24 h46" stroke="currentColor" stroke-width="3"/>
+  <rect x="20" y="12" width="14" height="12" fill="#FFD11A"/>
+  <path d="M4 12 L27 3 L50 12" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M27 24 v22" stroke="currentColor" stroke-width="2" opacity=".5"/>
+</svg>

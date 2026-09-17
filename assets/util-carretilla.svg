@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240" width="360" height="240" role="img" aria-label="Ilustración de una carretilla de carga con correas">
+  <rect width="360" height="240" fill="#141518"/>
+  <g stroke="#1C1E22" stroke-width="1">
+    <path d="M0 40h360M0 80h360M0 120h360M0 160h360M0 200h360M40 0v240M80 0v240M120 0v240M160 0v240M200 0v240M240 0v240M280 0v240M320 0v240"/>
+  </g>
+  <path d="M40 206h280" stroke="#2A2D31" stroke-width="3"/>
+  <g stroke="#6B7178" stroke-width="7" stroke-linecap="round" fill="none">
+    <path d="M150 46 L120 190"/>
+    <path d="M186 46 L156 190"/>
+    <path d="M148 56 h40"/>
+    <path d="M142 90 h40"/>
+    <path d="M130 150 h40"/>
+  </g>
+  <path d="M118 188 L214 188 L206 206 L112 206 Z" fill="#20232780" stroke="#6B7178" stroke-width="4"/>
+  <rect x="196" y="96" width="96" height="86" rx="4" fill="#1A1C1F" stroke="#4E535A" stroke-width="3"/>
+  <path d="M196 126 h96" stroke="#4E535A" stroke-width="2"/>
+  <rect x="232" y="96" width="24" height="30" fill="#FFD11A"/>
+  <path d="M190 138 h108" stroke="#FFD11A" stroke-width="5"/>
+  <circle cx="126" cy="196" r="22" fill="#0B0B0C" stroke="#6B7178" stroke-width="4"/>
+  <circle cx="126" cy="196" r="7" fill="#2A2D31"/>
+  <text x="24" y="228" fill="#8C939B" font-family="Roboto Mono, monospace" font-size="13" letter-spacing="2">CARRETILLA · 300 KG</text>
+</svg>
