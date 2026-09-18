@@ -459,3 +459,29 @@ html.has-motion .cursor{display:flex;}
   html.has-motion [data-aparecer]{opacity:1;transform:none;}
   .cursor{display:none !important;}
 }
+
+
+/* ====================== cortina de entrada ================================
+   Obligatoria en todas las plantillas de la biblioteca. Se pinta SOLO cuando
+   hay movimiento: sin GSAP o con `prefers-reduced-motion` la regla de abajo la
+   borra del documento, así que la página no puede quedarse tapada. Además,
+   main.js tiene una red de seguridad por tiempo que la retira pase lo que pase.
+   ========================================================================== */
+.cortina{position:fixed;inset:0;z-index:400;overflow:hidden;}
+.cortina-centro{position:absolute;inset:0;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:14px;text-align:center;padding:24px;}
+.cortina.esta-fuera{display:none;}
+html:not(.has-motion) .cortina{display:none;}
+@media (prefers-reduced-motion:reduce){.cortina{display:none;}}
+
+/* El gesto de mudanzas: se pasa la cinta, se sella el lote y la caja se abre
+   por el medio. Las solapas llevan el canto redondeado, como el cartón. */
+.cortina-solapa{position:absolute;left:0;right:0;height:50.5%;background:var(--panel);will-change:transform;}
+.cortina-solapa--arr{top:0;border-bottom:1px solid var(--linea);border-radius:0 0 52px 52px;}
+.cortina-solapa--aba{bottom:0;border-top:1px solid var(--linea);border-radius:52px 52px 0 0;}
+.cortina-cinta{position:absolute;left:0;right:0;top:50%;height:10px;margin-top:-5px;
+  background:var(--amarillo);transform:scaleX(0);transform-origin:0 50%;}
+.cortina-lote{font-family:var(--mono);font-size:.7rem;letter-spacing:.24em;
+  color:var(--amarillo);margin:0;opacity:0;}
+.cortina-marca{font-family:var(--display);font-size:clamp(1.8rem,7vw,3rem);
+  letter-spacing:.14em;text-transform:uppercase;color:var(--hueso);margin:0;opacity:0;}
